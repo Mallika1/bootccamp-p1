@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <title>Restaurant Inspection Data</title>
+
+      <!-- Added link to the jQuery Library -->
+      <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> -->
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="assets/javascript/simplePagination.js-master/jquery.simplePagination.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <div class="d-flex flex-grow-1">
+                            <span class="w-100 d-lg-none d-block"><!-- hidden spacer to center brand on mobile --></span>
+                            <a class="navbar-brand d-none d-lg-inline-block" href="#">
+                               Restaurant Inspection Web Portal
+                            </a>
+                            <a class="navbar-brand-two mx-auto d-lg-none d-inline-block" href="#">
+                                <img src="//placehold.it/40?text=LOGO" alt="logo">
+                            </a>
+                            <div class="w-100 text-right">
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar">
+                            <ul class="navbar-nav ml-auto flex-nowrap">
+                                <li class="nav-item">
+                                    <a href="./index.html" class="nav-link m-2 menu-item nav-active">Home</a>
+                                </li>
+                                
+                                <li class=" nav-item dropdown">
+                                    <a class=" nav-link  dropdown-toggle m-2" data-toggle="dropdown" href="#"aria-haspopup="true" aria-expanded="false">Inspections
+                                          <b class="caret"></b>
+                                    </a>
+                                    <div aria-labelledby="navbarDropdown" class="dropdown-menu" role="menu">
+                                                <a class="dropdown-item" href="./overview.html">Food Safety Program Overview</a>
+                                                <a class="dropdown-item" href="./inspection-result.html">Inspections Data</a>
+                                                <a class="dropdown-item" href="./food-establishment.html">Food Establishment</a>
+                                                </div>
+                              </li>
+
+
+                                          
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link m-2 menu-item">Map</a>
+                                </li>
+                                <li class="nav-item">
+                                        <a href="#" class="nav-link m-2 menu-item">Links</a>
+                                    </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link m-2 menu-item">Contact</a>
+                                </li>
+                                <li class="nav-item">
+                                        <a href="#" class="nav-link m-2 menu-item">Others</a>
+                                    </li>
+                            </ul>
+                        </div>
+                    </nav>
+            <!-- image display -->
+                    <div class="card text-center" id="card-primary">
+                             
+                              <div class="card-body">
+                                <h5 class="card-title">San Francisco</h5>
+                                <p class="card-text">Click to view restaurant Inspection Data</p>
+                                <a href="./inspection-result.html" class="btn btn-primary">View Inspection data</a>
+                              </div>
+                  </div>
+ <!-- about website -->
+ <div class= "container">
+            <div class="row ">
+                        <div class="col-md-8">
+                
+                  <div class="card text-center">
+                  <div class="card-header">
+                        <a href="./sohailCode.html" class="btn btn-primary">Favorite</a>
+                  </div>
+                  <!-- description -->
+                  <div class="card-body">
+                  <!-- <h5 class="card-title"></h5> -->
+                  <table class="table table-sm table-bordered table-hover table-striped text-left">
+                       
+                        <tbody class="display-restaurants">
+                          
+                          
+                        </tbody>
+                      </table>
+           
+           
+                </div>
+                  </div>
+            </div>
+      <!-- search button card -->
+            <div class="col-md-4">
+            <div class="card text-center">
+                        <div class="card-header">
+                                    <h5 class="card-title">Search Establishments</h5>
+                        </div>
+                        <div class="card-body searchResult">
+                       
+                        <div class="input-group">
+                              <input type="text" id="rest-input" name="" autocomplete="off" class="form-control" placeholder="enter 2 or more characters">
+                              <span class="input-group-addon">
+                              <button id="searchBtn" class="btn btn-default btn-xs" type="button" onclick="">
+                              <i class="glyphicon glyphicon-search">ABC</i>  </button>
+                        </span>
+                            
+                        </div>
+                              
+                  </div>
+            </div>
+            </div>
+ </div><!-- row -->
+</div> <!-- container -->
+<!-- <script src="assets/javascript/app.js"></script> -->
+<script src="assets/javascript/listRestaurants.js"></script>
+
+</body>
+
+</html>

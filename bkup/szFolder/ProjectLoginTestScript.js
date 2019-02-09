@@ -54,12 +54,15 @@ btnLogout.addEventListener('click', e=> {
 //  add a realtime listner
     firebase.auth().onAuthStateChanged(firebaseUser => {
         if (firebaseUser) {
+    // Here the user is logged in and print the user email id to the console. If user is logged in the firbaseUser has the email ID value
+    // stored in the firebaseUser.email
             console.log(firebaseUser.email +" is logged in.");
             
             $("#btnLogout").show();
         } else {
+    // Here the user is not logged in. firebaseUser has the vaule null.
             console.log("Not Logged in.");
-            
+            console.log(firebaseUser);
             $("#btnLogout").hide();
         }
     });
