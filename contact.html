@@ -2,138 +2,142 @@
 <html lang="en">
 
 <head>
-      <meta charset="UTF-8">
-      <title>Restaurant Inspection Data</title>
-       <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <script src="assets/javascript/simplePagination.js-master/jquery.simplePagination.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
-  
-      <link rel="stylesheet" href="assets/css/darkley.css">
-      <link rel="stylesheet" href="assets/css/glyphicons.css">
-      <link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8">
+    <title>Restaurant Inspection Data</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="assets/javascript/simplePagination.js-master/jquery.simplePagination.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="assets/css/darkley.css">
+    <link rel="stylesheet" href="assets/css/glyphicons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
+
 <body>
 
-            <nav class="navbar navbar-expand-lg navbar-light bg-primary navbar-fixed-top sticky-top">
-                        <div class="d-flex flex-grow-1">
-                            <span class="w-100 d-lg-none d-block"><!-- hidden spacer to center brand on mobile --></span>
-                            <a class="navbar-brand d-none d-lg-inline-block" href="#">
-                               Restaurant Inspection Web Portal
-                            </a>
-                           
-                            <div class="w-100 text-right">
-                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
-                                    <span class="navbar-toggler-icon"></span>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar">
-                            <ul class="navbar-nav ml-auto flex-nowrap">
-                                <li class="nav-item">
-                                    <a href="./index.html" class="nav-link  menu-item nav-active pr-3"><span class="glyphicon glyphicon-home"></span>&nbsp; Home</a>
-                                </li>
-                                
-                                <li class=" nav-item dropdown">
-                                    <a class=" nav-link  dropdown-toggle  pr-3" data-toggle="dropdown" href="#"aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-check"></span>&nbsp;Inspections
-                                   
-                                    </a>
-                                    <div aria-labelledby="navbarDropdown" class="dropdown-menu" role="menu">
-                                                <a class="dropdown-item" href="./food-overview.html">Food Safety Program Overview</a>
-                                                <a class="dropdown-item" href="./inspection-result.html">Inspections Data</a>
-                                                <a class="dropdown-item" href="./food-establishment.html">Food Establishment</a>
-                                                </div>
-                              </li>
-                                <li class="nav-item">
-                                    <a href="map.html" class="nav-link menu-item  pr-3"><i class="glyphicon glyphicon-map-marker"></i>&nbsp;Map</a>
-                                </li>
-                                <li class="nav-item">
-                                        <a href="./link.html" class="nav-link  menu-item  pr-3"><span class="glyphicon glyphicon-link"></span>&nbsp;Links</a>
-                              </li>
-                                <li class="nav-item">
-                                    <a href="./contact.html" class="nav-link  menu-item  pr-3"><i class="glyphicon glyphicon-earphone"></i>&nbsp;Contact</a>
-                                </li>
-                                <!-- <li class="nav-item">
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary navbar-fixed-top sticky-top">
+        <div class="d-flex flex-grow-1">
+            <span class="w-100 d-lg-none d-block">
+                <!-- hidden spacer to center brand on mobile --></span>
+            <a class="navbar-brand d-none d-lg-inline-block" href="#">
+                Restaurant Inspection Web Portal
+            </a>
+
+            <div class="w-100 text-right">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar">
+            <ul class="navbar-nav ml-auto flex-nowrap">
+                <li class="nav-item">
+                    <a href="./index.html" class="nav-link  menu-item nav-active pr-3"><span class="glyphicon glyphicon-home"></span>&nbsp;
+                        Home</a>
+                </li>
+
+                <li class=" nav-item dropdown">
+                    <a class=" nav-link  dropdown-toggle  pr-3" data-toggle="dropdown" href="#" aria-haspopup="true"
+                        aria-expanded="false"><span class="glyphicon glyphicon-check"></span>&nbsp;Inspections
+
+                    </a>
+                    <div aria-labelledby="navbarDropdown" class="dropdown-menu" role="menu">
+                        <a class="dropdown-item" href="./food-overview.html">Food Safety Program Overview</a>
+                        <a class="dropdown-item" href="./inspection-result.html">Inspections Data</a>
+                        <a class="dropdown-item" href="./food-establishment.html">Food Establishment</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="map.html" class="nav-link menu-item  pr-3"><i class="glyphicon glyphicon-map-marker"></i>&nbsp;Map</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./link.html" class="nav-link  menu-item  pr-3"><span class="glyphicon glyphicon-link"></span>&nbsp;Links</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./contact.html" class="nav-link  menu-item  pr-3"><i class="glyphicon glyphicon-earphone"></i>&nbsp;Contact</a>
+                </li>
+                <!-- <li class="nav-item">
                                         <a href="#" class="nav-link menu-item  pr-3"><span class="glyphicon glyphicon-user"></span>&nbsp;Sign In</a>
                                     </li> -->
-                            </ul>
-                        </div>
-                    </nav>
-                    <div class="container" style="margin-top: 5px; " >
-                    <nav aria-label="breadcrumb">
-                              <ol class="breadcrumb" style="margin-bottom: 5px; padding: 1px 10px 3px 8px;">
-                                <li class="breadcrumb-item active" aria-current="page" >
-                                <a href="./index.html">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page" >
-                                        <a href="#">Contact</a></li>
-                              </ol>
-                            </nav>
-                        </div>
- <!-- about website -->
- <div class= "container">
-            <div class="row ">
-                        <div class="col-md-8">
-                
-                  <div class="card m-2">
-                  <div class="card-header">
-                        <h5>Contact Us</h5>
-                  </div>
-                  <!-- description -->
-                  <div class="card-body">
-                  <!-- <h5 class="card-title"></h5> -->
-                  <form class="form-group">
+            </ul>
+        </div>
+    </nav>
+    <div class="container" style="margin-top: 5px; ">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb" style="margin-bottom: 5px; padding: 1px 10px 3px 8px;">
+                <li class="breadcrumb-item active" aria-current="page">
+                    <a href="./index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">
+                    <a href="#">Contact</a></li>
+            </ol>
+        </nav>
+    </div>
+    <!-- about website -->
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-8">
 
-                        <div>
-            
-                            <label>Name</label>
-            
-                            <br>
-            
-                            <input class="rounded-0 w-100" placeholder="First Last">
-            
-                        </div>
-            
-                        <div>
-            
-                            <label>Email</label>
-            
-                            <br>
-            
-                            <input class="rouneded-0 w-100" placeholder="example@example.com">
-            
-                        </div>
-            
-                        <div>
-            
-                            <label>Message</label>
-            
-                            <br>
-            
-                            <textarea class="rounded-0 w-100" rows="6" cols="160"></textarea>
-            
-                            <br>
-            
-                            <input type="submit" value="Submit">
-            
-                        </div>
-            
-                    </form>   
-           
-                        </div>
-                  </div>
+                <div class="card m-2">
+                    <div class="card-header">
+                        <h5>Contact Us</h5>
+                    </div>
+                    <!-- description -->
+                    <div class="card-body">
+                        <!-- <h5 class="card-title"></h5> -->
+                        <form class="form-group">
+
+                            <div>
+
+                                <label>Name</label>
+
+                                <br>
+
+                                <input class="rounded-0 w-100" placeholder="First Last">
+
+                            </div>
+
+                            <div>
+
+                                <label>Email</label>
+
+                                <br>
+
+                                <input class="rouneded-0 w-100" placeholder="example@example.com">
+
+                            </div>
+
+                            <div>
+
+                                <label>Message</label>
+
+                                <br>
+
+                                <textarea class="rounded-0 w-100" rows="6" cols="160"></textarea>
+
+                                <br>
+
+                                <input type="submit" value="Submit">
+
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
             </div>
-    
- </div><!-- row -->
-</div> <!-- container -->
-      <nav class="navbar navbar-expand-lg navbar-light  navbar-fixed-bottom sticky-bottom bg-primary mt-3 p-0" style="text-align:center;min-height:20px;">
-     
-            <p class="footer-block" style="width:100%;margin-bottom:5px;margin-top:7px;padding:0px;font-size:10px" class="navbar-text">
-                  <a href="" class="navbar-link">Copyright &copy;2019</a>
-                  <a href="" class="navbar-link" target="_blank"></a>
-            </p>
-      </nav>
+
+        </div><!-- row -->
+    </div> <!-- container -->
+    <nav class="navbar navbar-expand-lg navbar-light  navbar-fixed-bottom sticky-bottom bg-primary mt-3 p-0" style="text-align:center;min-height:20px;">
+
+        <p class="footer-block" style="width:100%;margin-bottom:5px;margin-top:7px;padding:0px;font-size:10px" class="navbar-text">
+            <a href="" class="navbar-link">Copyright &copy;2019</a>
+            <a href="" class="navbar-link" target="_blank"></a>
+        </p>
+    </nav>
 
 
 
