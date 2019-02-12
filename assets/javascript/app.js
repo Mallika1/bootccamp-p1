@@ -1,7 +1,9 @@
 // let offset = 0 ;
 var index=1 ;
+var businessName=" " ;
 getAPIData(20,0);
-
+var high = [];
+var moderate = [] ;
 function getAPIData(showResult,offset){
     
 $.ajax({
@@ -39,6 +41,7 @@ $.ajax({
     }else if(riskCategory=== "High Risk")
     {
         var tRow = $("<tr class='table-danger'>");
+      
     }
     var th = $("<th scope='row'>").text(index);
     var name = $("<td>").text(response[i].business_name);
@@ -60,11 +63,11 @@ $.ajax({
   });
 }
 
-  $("#next").on("click", function(event) {
+//   $("#next").on("click", function(event) {
    
-    getAPIData(20,20);
+//     getAPIData(20,20);
 
-  });
+//   });
   
 //   $('.pagination').twbsPagination({
 //     totalPages: 10,
@@ -93,43 +96,3 @@ $(function() {
 })
 });
 
-function displaySearchResult(restAddress){
-   
-    $.ajax({
-        url: "https://data.sfgov.org/resource/sipz-fjte.json?business_address=" + restAddress,
-        type: "GET",
-        data: {
-          "$limit" : 5,
-          "$$app_token" : "LjHPv42GKlRqqjnKBW78B06jY"
-        }
-    }).done(function(data) {
-      alert("Retrieved " + data.length + " records from the dataset!");
-      console.log(data);
-      var uList = $("<ul class='list-group'>");
-      var lList = $("<li class='list-group-item text-left'>" );
-      lList.append($("<p>").text( "Search returnd " +data.length +" establishment"));
-      uList.append(lList);
-      for (var i = 0; i < data.length; i++) {
-
-       
-        var lList = $("<li class='list-group-item text-left'>");
-       
-       
-        lList.append($("<h5 style='color:teal'>").text( data[i].business_name));
-        lList.append($("<span>").text(data[i].business_address));
-        lList.append($("<br><small>").text(data[i].risk_category));
-        lList.append($("<br><small>").text(data[i].violation_description));
-        uList.append(lList);
-
-      }
-      $(".searchResult").append(uList);
-
-    })
-
-};
-
-$("#searchBtn").on("click", function(event) {
-    event.preventDefault();
-    let restAddress = $("#rest-input").val();
-    displaySearchResult(restAddress);
-});
