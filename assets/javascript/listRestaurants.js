@@ -31,8 +31,8 @@ $.ajax({
     var convertedDate = moment(insDate, randomFormat);
     var modifiesDate = convertedDate.format("MM/DD/YY") ;
 
-    
-
+    var address = data[i].business_address ;
+    var mapLink = "https://maps.google.com/?q=" + address;
     aDiv.append($("<h5>").text( data[i].business_name));
     aDiv.append($("<span>").text("Location Address : " + data[i].business_address));
     aDiv.append($("<br><span>").text("Location Zip : "+ data[i].business_postal_code));
@@ -41,7 +41,14 @@ $.ajax({
     aDiv.append($("<br><span>").text("Inspection Score : " + data[i].inspection_score));
     aDiv.append($("<br><span>").text("Risk Category : "+ data[i].risk_category));
     aDiv.append($("<br><span>").text("Violation Description : "+ data[i].violation_description));
-    aDiv.append($("<br><a href='#' class='text-center'>").text("See this address on Google Map"));
+    
+   
+    var aTag = $('<a>');
+    aTag.attr("href" , mapLink);
+    aTag.attr("target" , "_blank");
+    aDiv.append($("<br>"));
+    aDiv.append((aTag).text("See this address on Google Map"));
+   
     aDiv.append($("<br><a href='#' class='text-center'>").text("Add to Favorite"));
 
     
