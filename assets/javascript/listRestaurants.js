@@ -31,8 +31,8 @@ var tBody = $("<tbody>");
     aDiv.append($("<br><small>").text("Inspection Type: " + data[i].inspection_type));
     aDiv.append($("<br><small>").text("Inspection Date: "+ data[i].inspection_date));
     aDiv.append($("<br><a href='#' class='text-center'>").text("See this address on Google Map"));
-    aDiv.append($("<br><a href='#' class='text-center'>").text("Add to Favorite"));
-
+    // aDiv.append($("<br><a href='../szFavorites.html' class='text-center'>").text("Add to Favorite"));
+    aDiv.append($('<br><button onclick="saveToFavorites(this.data[i].business_name)"').text("Add to Favorite"));
     
 
     tData.append(aDiv);
@@ -42,6 +42,25 @@ var tBody = $("<tbody>");
     
     // tBody.append(tRow);
     // index++;
+    
+
+
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBpWPt-QRs0l-OEUr2wQmyoPw39EgP0qGU",
+    authDomain: "project1favorites.firebaseapp.com",
+    databaseURL: "https://project1favorites.firebaseio.com",
+    projectId: "project1favorites",
+    storageBucket: "project1favorites.appspot.com",
+    messagingSenderId: "206690713544"
+  };
+  firebase.initializeApp(config);
+  dataBaseFavorites = firebase.database();
+  
+  function saveToFavorites(addFavorites) {
+    var favoriteObject = addFavorites;
+    dataBaseFavorites.ref().push(favoriteObject);
+  }
     }
    
   //}
