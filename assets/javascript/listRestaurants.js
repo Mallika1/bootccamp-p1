@@ -49,7 +49,7 @@ $.ajax({
     aDiv.append($("<br>"));
     aDiv.append((aTag).text("See this address on Google Map"));
    
-    aDiv.append($("<br><a href='#' class='text-center'>").text("Add to Favorite"));
+    // aDiv.append($("<br><a href='#' class='text-center'>").text("Add to Favorite"));
 
     
 
