@@ -85,9 +85,9 @@ $(function() {
         onPageClick: function (pageNumber, event) {
             console.log("page" +pageNumber);
             if(pageNumber ==1){
-                index =0 ;
+                index =1 ;
             }else{
-            index = pageNumber*10 +1;
+            index =  pageNumber*20-pageNumber*10;
             }
          let   offset = pageNumber*20-20;
             $("tbody").empty();

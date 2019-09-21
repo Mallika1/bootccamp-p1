@@ -18,9 +18,7 @@ function displaySearchResult(restAddress){
         
            if(currentName !=" " && temp_arr.indexOf(currentName) == -1)
            {
-            
                 temp_arr[i] = currentName;
-                // console.log(" temp_arr[i]" + );
            }
       }
       var uList = $("<ul class='list-group'>");
@@ -65,11 +63,7 @@ $("#searchBtn").on("click", function(event) {
      if(restAddress != " " )
      {
         $("#searchResultsWaitPanel").removeClass("sr-only");
-        // displaySearchResult(restAddress);
         setTimeout(displaySearchResult(restAddress), 20000);
      }
-   // startSearch();
-    // setInterval(nextImage, 3000);
-    // displaySearchResult(restAddress);
 });
 

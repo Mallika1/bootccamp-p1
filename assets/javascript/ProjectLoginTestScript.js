@@ -72,7 +72,7 @@ btnLogout.addEventListener('click', e=> {
 
 });//  add a realtime listner
 
-   firebase.auth().onAuthStateChanged(firebaseUser => {
+firebase.auth().onAuthStateChanged(firebaseUser => {
 
        if (firebaseUser) {
 
